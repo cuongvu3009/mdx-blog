@@ -1,6 +1,6 @@
-import React from "react"
-import video from "../../assets/connect.mp4"
-import styled from "styled-components"
+import React from 'react'
+import video from '../../assets/connect.mp4'
+import styled from 'styled-components'
 export const RegVideo = () => {
   return <RegVideoWrapper>regular video</RegVideoWrapper>
 }
@@ -61,6 +61,6 @@ const IframeVideoWrapper = styled.div`
 `
 
 Video.defaultProps = {
-  src: "https://www.youtube.com/embed/-8ORfgUa8ow",
-  title: "the best html css tutorial ever !",
+  src: 'https://www.youtube.com/embed/FTQbiNvZqaY',
+  title: 'Hurry boiii, she is waiting for uuuuuuu',
 }

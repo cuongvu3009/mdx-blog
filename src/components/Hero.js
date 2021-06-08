@@ -1,10 +1,31 @@
-import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
-import Image from "gatsby-image"
+import React from 'react'
+import { graphql, useStaticQuery } from 'gatsby'
+import Image from 'gatsby-image'
 // ...GatsbyImageSharpFluid
 
 const Hero = () => {
-  return <h4>hero component</h4>
+  const { person } = useStaticQuery(query)
+
+  return (
+    <header className="hero">
+      <Image
+        fluid={person.childImageSharp.fluid}
+        className="hero-person"
+      ></Image>
+    </header>
+  )
 }
+
+const query = graphql`
+  {
+    person: file(relativePath: { eq: "person.png" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`
 
 export default Hero
