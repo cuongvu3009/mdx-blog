@@ -31,9 +31,7 @@ export const query = graphql`
           readTime
           image {
             childImageSharp {
-              fluid {
-                src
-              }
+              gatsbyImageData
             }
           }
         }
